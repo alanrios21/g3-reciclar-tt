@@ -1,0 +1,113 @@
+body { background-color: #A4D86B; font-family: 'Roboto', sans-serif; color: black;}
+#header { background-color: #BDB16D; position: fixed; width: 100%;  top: 0px; left: 0px;  padding: 10px;  z-index: 1; margin-bottom : 100px; font-weight: bolder;} 
+#navbar ul {right: 20px;  position: fixed; top: 20px;}
+#navbar ul li {display: inline;}
+.navlink { text-decoration: none;  
+    color: white;
+    margin: 30px;
+    padding: 6px 10px;
+    border-radius: 10px;
+    font-size: 22px;
+   position: relative;
+   top: 10px;} 
+#img {position: relative; bottom: 5px;}
+.footer { background-color: #BDB16D; padding: 20px; text-align: center; position: fixed; width: 100%; left: 0px; bottom:0; font-size: 15px; font-weight: bold;}
+#img1 {  display: flex ; justify-content: center; align-items: center; }
+.reciclarte { text-align:center; font-size: 40px; margin-top: 200px;} 
+.p1 { padding-left: 40px; padding-right: 40px; font-size: 20px;} 
+.p2 { padding-left: 60px; padding-right: 40px; font-size: 20px;} 
+.p3 { padding-left: 40px; padding-right: 40px; font-size: 30px;} 
+.prueba1 {margin-bottom: 100px;}
+.form {width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center; background-color: #BDB16D; max-width: 600px;margin-left: 640px; margin-top: 200px; opacity: 0.8; border-radius: 7px; 
+    box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19); height: 600px;}
+    .formulario {border-top: none; margin-top: 10px; margin-bottom: 10px;
+        border-left: none;
+        border-right: none;
+        outline: none;
+        font-weight: 500; border-radius: 7px; padding: 5px; }
+    .boton { width: 100%;
+        outline: none;
+        border: none;
+        background-color:#A4D86B;;
+        max-width: 150px;
+        border-radius: 5px;  padding-bottom: 10px;
+        padding-top: 10px;
+        font-weight: 500;
+        color: black;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        margin-top: 10px; margin-left: 15px;
+    cursor: pointer; }
+.form2 {width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center; background-color: #BDB16D; max-width: 500px;margin-left: 700px; margin-top: 200px; opacity: 0.8; border-radius: 7px; 
+    box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19); height: 500px; }
+
+.aviso { background-color:#BDB16D; width: 100%; max-width: 500px; padding: 5px; text-align: center; display: flex; justify-content: center;align-items: center; margin-left: 695px; 
+    margin-top: 50px ; border-radius: 7px;box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2); }
+
+.boton2 { width: 100%;
+    outline: none;
+    border: none;
+    background-color:#BDB16D;
+    max-width: 150px;
+    border-radius: 5px;  padding-bottom: 10px;
+    padding-top: 10px;
+    font-weight: 500;
+    color: black;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin-top: 50px; margin-left: 875px; margin-bottom: 50px; text-decoration: none; }
+    .boton3 { width: 100%;
+        outline: none;
+        border: none;
+        background-color:#BDB16D;
+        max-width: 250px;
+        border-radius: 5px;  padding-bottom: 10px;
+        padding-top: 10px;
+        font-weight: 500;
+        color: black;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        margin-top: 50px; margin-left: 800px; margin-bottom: 50px; text-decoration: none; }
+    .titulo-blog{
+        text-align: center;
+        margin-top: 200px;
+        font-size: 40px;
+       
+    }
+    .subtitulo-blog{
+        font-size: 30px;
+        text-align: center;
+    }
+
+    .centrar-img{
+        display: flex ;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+    }
+
+    .clase-img{
+        margin-bottom: 100px;
+    }
+
+    .parrafo-contactos{
+        text-align: center;
+        font-size: 30px;
+    }
+    .bajar-parrafos{
+        margin-top: 250px;
+    }
