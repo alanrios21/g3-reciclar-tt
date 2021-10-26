@@ -126,4 +126,7 @@ body {  font-family: 'Roboto', sans-serif; color: black;}
         top: 5px;
     }
 
+    ul {
+        list-style-position: inside;
+    }
     
