@@ -1,9 +1,9 @@
 body {  font-family: 'Roboto', sans-serif; color: black;}
-#header { background-color: #BDB16D; position: fixed; width: 100%;  top: 0px; left: 0px;  padding: 5px;  z-index: 1; margin-bottom : 100px; font-weight: bolder;} 
+#header { background-color: #ebebea; position: fixed; width: 100%;  top: 0px; left: 0px;  padding: 5px;  z-index: 1; margin-bottom : 100px; font-weight: bolder; } 
 #navbar ul {right: 20px;  position: fixed; top: 20px;}
 #navbar ul li {display: inline;}
 .navlink { text-decoration: none;  
-    color: white;
+    color: #4d5f3d;
     margin: 30px;
     padding: 6px 10px;
     border-radius: 10px;
@@ -114,7 +114,7 @@ body {  font-family: 'Roboto', sans-serif; color: black;}
 
     .imagen-central{
         background-image: url('/assets/Contenido_2.png'); 
-    background-size: 2000px;
+    background-size: cover;
     background-repeat: no-repeat;
     height: 800px;
     margin-top: 60px;
