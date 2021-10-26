@@ -1,5 +1,5 @@
-body { background-color: #A4D86B; font-family: 'Roboto', sans-serif; color: black;}
-#header { background-color: #BDB16D; position: fixed; width: 100%;  top: 0px; left: 0px;  padding: 10px;  z-index: 1; margin-bottom : 100px; font-weight: bolder;} 
+body { background-color: #FFFFFF; font-family: 'Roboto', sans-serif; color: black;}
+#header { background-color: #7DDBCB; position: fixed; width: 100%;  top: 0px; left: 0px;  padding: 10px;  z-index: 1; margin-bottom : 100px; font-weight: bolder;} 
 #navbar ul {right: 20px;  position: fixed; top: 20px;}
 #navbar ul li {display: inline;}
 .navlink { text-decoration: none;  
@@ -23,7 +23,7 @@ body { background-color: #A4D86B; font-family: 'Roboto', sans-serif; color: blac
     flex-direction: column;
     align-items: center;
     justify-content: center; background-color: #BDB16D; max-width: 600px;margin-left: 640px; margin-top: 200px; opacity: 0.8; border-radius: 7px; 
-    box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19); height: 600px;}
+    box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19); height: 600px; background-image: url("/g3-reciclar-tt/assets/") ;}
     .formulario {border-top: none; margin-top: 10px; margin-bottom: 10px;
         border-left: none;
         border-right: none;
@@ -111,3 +111,8 @@ body { background-color: #A4D86B; font-family: 'Roboto', sans-serif; color: blac
     .bajar-parrafos{
         margin-top: 250px;
     }
+
+    .telefono {width:30px; position: relative; top:5px; right: 5px;}
+    .mail{width:30px; position: relative; top:5px; right: 5px;}
+    .facebook {width:30px; position: relative; top:5px; right: 5px;}
+    .instagram {width:30px; position: relative; top:5px; right: 5px;}
