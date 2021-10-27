@@ -1,4 +1,4 @@
-body {  font-family: 'Roboto', sans-serif; color: black;}
+body {  font-family: 'Roboto', sans-serif; color: #4EAF59;}
 #header { background-color: #ebebea; position: fixed; width: 100%;  top: 0px; left: 0px;  padding: 5px;  z-index: 1; margin-bottom : 100px; font-weight: bolder; } 
 #navbar ul {right: 20px;  position: fixed; top: 20px;}
 #navbar ul li {display: inline;}
@@ -118,6 +118,7 @@ body {  font-family: 'Roboto', sans-serif; color: black;}
     background-repeat: no-repeat;
     height: 800px;
     margin-top: 60px;
+    margin-bottom: 60px;
     
     }
     
@@ -130,3 +131,6 @@ body {  font-family: 'Roboto', sans-serif; color: black;}
         list-style-position: inside;
     }
     
+    .navlink:hover{
+        color: white;
+    }
