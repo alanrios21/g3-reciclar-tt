@@ -134,3 +134,7 @@ body {  font-family: 'Roboto', sans-serif; color: #4EAF59;}
     .navlink:hover{
         color: white;
     }
+
+    .container, .container-fluid, .container-lg, .container-md, .container-sm, .container-xl, .container-xxl{
+        padding-top: 150px;
+    }

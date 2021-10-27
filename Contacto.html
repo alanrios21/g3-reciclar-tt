@@ -10,8 +10,8 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap" rel="stylesheet">
-    <link href="css/bootstrap.min.css">
-<link href="js/bootstrap.min.js">
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+<link rel="stylesheet" href="js/bootstrap.min.js">
 </head>
 <body>
     <header id="header" class="header"> 
@@ -27,6 +27,46 @@
     </nav>
     </header>
          
+    <div class="container px-5 my-5">
+        <form id="contactForm" data-sb-form-api-token="API_TOKEN">
+            <div class="form-floating mb-3">
+                <input class="form-control" id="nombre" type="text" placeholder="Nombre" data-sb-validations="required" />
+                <label for="nombre">Nombre</label>
+                <div class="invalid-feedback" data-sb-feedback="nombre:required">Nombre is required.</div>
+            </div>
+            <div class="form-floating mb-3">
+                <input class="form-control" id="apellido" type="text" placeholder="Apellido" data-sb-validations="required" />
+                <label for="apellido">Apellido</label>
+                <div class="invalid-feedback" data-sb-feedback="apellido:required">Apellido is required.</div>
+            </div>
+            <div class="form-floating mb-3">
+                <input class="form-control" id="email" type="email" placeholder="Email" data-sb-validations="required,email" />
+                <label for="email">Email</label>
+                <div class="invalid-feedback" data-sb-feedback="email:required">Email is required.</div>
+                <div class="invalid-feedback" data-sb-feedback="email:email">Email Email is not valid.</div>
+            </div>
+            <div class="form-floating mb-3">
+                <textarea class="form-control" id="mensaje" type="text" placeholder="Mensaje" style="height: 10rem;" data-sb-validations="required"></textarea>
+                <label for="mensaje">Mensaje</label>
+                <div class="invalid-feedback" data-sb-feedback="mensaje:required">Mensaje is required.</div>
+            </div>
+            <div class="d-none" id="submitSuccessMessage">
+                <div class="text-center mb-3">
+                    <div class="fw-bolder">Form submission successful!</div>
+                    <p>To activate this form, sign up at</p>
+                    <a href="https://startbootstrap.com/solution/contact-forms">https://startbootstrap.com/solution/contact-forms</a>
+                </div>
+            </div>
+            <div class="d-none" id="submitErrorMessage">
+                <div class="text-center text-danger mb-3">Error sending message!</div>
+            </div>
+            <div class="d-grid">
+                <button class="btn btn-primary btn-lg disabled" id="submitButton" type="submit">Submit</button>
+            </div>
+        </form>
+    </div>
+    <script src="https://cdn.startbootstrap.com/sb-forms-latest.js"></script>
+
         <h1 class="titulo-blog" id="titulo-blog">Contactanos!!</h1> 
         <div class="bajar-parrafos" id="bajar-parrafos">
         <p class="parrafo-contactos" id="parrafo-contactos">Teléfono : 351 408745</p>
