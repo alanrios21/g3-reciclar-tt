@@ -55,7 +55,9 @@ body { background-color: #FFFFFF; font-family: 'Roboto', sans-serif; color: blac
     display: flex;
     flex-direction: column;
     align-items: center;
-    justify-content: center; background-color: #ebebea; max-width: 500px;margin-left: 700px; margin-top: 200px; opacity: 0.8; border-radius: 7px; 
+
+    justify-content: center; background-image: url(/g3-reciclar-tt/assets/Fondo_iniciosesion.png);; max-width: 500px;margin-left: 700px; margin-top: 200px; opacity: 0.8; border-radius: 7px; 
+
     box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19); height: 500px; }
 
 .aviso { background-color:#ebebea; width: 100%; max-width: 500px; padding: 5px; text-align: center; display: flex; justify-content: center;align-items: center; margin-left: 695px; 
