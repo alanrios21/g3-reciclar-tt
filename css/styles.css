@@ -1,5 +1,7 @@
-body {  font-family: 'Roboto', sans-serif; color: #4EAF59;}
-#header { background-color: #ebebea; position: fixed; width: 100%;  top: 0px; left: 0px;  padding: 5px;  z-index: 1; margin-bottom : 100px; font-weight: bolder; } 
+
+body { background-color: #FFFFFF; font-family: 'Roboto', sans-serif; color: black;}
+#header { background-color: #ebebea; position: fixed; width: 100%;  top: 0px; left: 0px;  padding: 10px;  z-index: 1; margin-bottom : 300px; font-weight: bolder;} 
+
 #navbar ul {right: 20px;  position: fixed; top: 20px;}
 #navbar ul li {display: inline;}
 .navlink { text-decoration: none;  
@@ -10,8 +12,11 @@ body {  font-family: 'Roboto', sans-serif; color: #4EAF59;}
     font-size: 22px;
    position: relative;
    top: 10px;} 
-#img {position: relative; bottom: 5px; }
-.footer { background-color: #BDB16D; padding: 20px; text-align: center; position: fixed; width: 100%; left: 0px; bottom:0; font-size: 15px; font-weight: bold;}
+
+#img {position: relative; bottom: 5px;}
+.footer { background-color: #ebebea; padding: 20px; text-align: center; position: fixed; width: 100%; left: 0px; bottom:0; font-size: 15px; font-weight: bold;}
+#img1 {  display: flex ; justify-content: center; align-items: center; }
+
 
 .reciclarte { text-align:center; font-size: 40px; margin-top: 200px;} 
 .p1 { padding-left: 40px; padding-right: 40px; font-size: 20px;} 
@@ -22,8 +27,8 @@ body {  font-family: 'Roboto', sans-serif; color: #4EAF59;}
     display: flex;
     flex-direction: column;
     align-items: center;
-    justify-content: center; background-color: #BDB16D; max-width: 600px;margin-left: 640px; margin-top: 200px; opacity: 0.8; border-radius: 7px; 
-    box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19); height: 600px;}
+    justify-content: center; background-color: #ebebea; max-width: 600px;margin-left: 640px; margin-top: 200px; opacity: 0.8; border-radius: 7px; 
+    box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19); height: 600px; background-image: url("/g3-reciclar-tt/assets/") ;}
     .formulario {border-top: none; margin-top: 10px; margin-bottom: 10px;
         border-left: none;
         border-right: none;
@@ -32,7 +37,9 @@ body {  font-family: 'Roboto', sans-serif; color: #4EAF59;}
     .boton { width: 100%;
         outline: none;
         border: none;
-        background-color:#A4D86B;
+
+        background-color:#ebebea;;
+
         max-width: 150px;
         border-radius: 5px;  padding-bottom: 10px;
         padding-top: 10px;
@@ -48,16 +55,16 @@ body {  font-family: 'Roboto', sans-serif; color: #4EAF59;}
     display: flex;
     flex-direction: column;
     align-items: center;
-    justify-content: center; background-color: #BDB16D; max-width: 500px;margin-left: 700px; margin-top: 200px; opacity: 0.8; border-radius: 7px; 
+    justify-content: center; background-color: #ebebea; max-width: 500px;margin-left: 700px; margin-top: 200px; opacity: 0.8; border-radius: 7px; 
     box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19); height: 500px; }
 
-.aviso { background-color:#BDB16D; width: 100%; max-width: 500px; padding: 5px; text-align: center; display: flex; justify-content: center;align-items: center; margin-left: 695px; 
+.aviso { background-color:#ebebea; width: 100%; max-width: 500px; padding: 5px; text-align: center; display: flex; justify-content: center;align-items: center; margin-left: 695px; 
     margin-top: 50px ; border-radius: 7px;box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2); }
 
 .boton2 { width: 100%;
     outline: none;
     border: none;
-    background-color:#BDB16D;
+    background-color:#ebebea;
     max-width: 150px;
     border-radius: 5px;  padding-bottom: 10px;
     padding-top: 10px;
@@ -71,7 +78,7 @@ body {  font-family: 'Roboto', sans-serif; color: #4EAF59;}
     .boton3 { width: 100%;
         outline: none;
         border: none;
-        background-color:#BDB16D;
+        background-color:#ebebea;
         max-width: 250px;
         border-radius: 5px;  padding-bottom: 10px;
         padding-top: 10px;
@@ -112,6 +119,19 @@ body {  font-family: 'Roboto', sans-serif; color: #4EAF59;}
         margin-top: 250px;
     }
 
+
+    .telefono {width:30px; position: relative; top:5px; right: 5px;}
+    .mail{width:30px; position: relative; top:5px; right: 5px;}
+    .facebook {width:30px; position: relative; top:5px; right: 5px;}
+    .instagram {width:30px; position: relative; top:5px; right: 5px;}
+    .form-contacto{background-image: url("/g3-reciclar-tt/assets/Fondo.png");}
+    .container {margin-top: 600px;}
+    .img-thumbnail {width: 350px;}
+    .noticias {position: relative; top: 120px; left:120px}
+    .compostar { text-align: center; position: relative; top: 60px;}
+    .ecologia { text-align: right;position: relative; right: 120px;}
+    .sitios {text-align: center;}
+
     .imagen-central{
         background-image: url('/assets/Contenido_2.png'); 
     background-size: cover;
@@ -138,3 +158,4 @@ body {  font-family: 'Roboto', sans-serif; color: #4EAF59;}
     .container, .container-fluid, .container-lg, .container-md, .container-sm, .container-xl, .container-xxl{
         padding-top: 150px;
     }
+
