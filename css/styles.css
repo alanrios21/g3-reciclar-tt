@@ -1,5 +1,5 @@
 body { background-color: #FFFFFF; font-family: 'Roboto', sans-serif; color: black;}
-#header { background-color: #7DDBCB; position: fixed; width: 100%;  top: 0px; left: 0px;  padding: 10px;  z-index: 1; margin-bottom : 100px; font-weight: bolder;} 
+#header { background-color: #7DDBCB; position: fixed; width: 100%;  top: 0px; left: 0px;  padding: 10px;  z-index: 1; margin-bottom : 300px; font-weight: bolder;} 
 #navbar ul {right: 20px;  position: fixed; top: 20px;}
 #navbar ul li {display: inline;}
 .navlink { text-decoration: none;  
@@ -116,3 +116,10 @@ body { background-color: #FFFFFF; font-family: 'Roboto', sans-serif; color: blac
     .mail{width:30px; position: relative; top:5px; right: 5px;}
     .facebook {width:30px; position: relative; top:5px; right: 5px;}
     .instagram {width:30px; position: relative; top:5px; right: 5px;}
+    .form-contacto{background-image: url("/g3-reciclar-tt/assets/Fondo.png");}
+    .container {margin-top: 600px;}
+    .img-thumbnail {width: 350px;}
+    .noticias {position: relative; top: 120px; left:120px}
+    .compostar { text-align: center; position: relative; top: 60px;}
+    .ecologia { text-align: right;position: relative; right: 120px;}
+    .sitios {text-align: center;}
