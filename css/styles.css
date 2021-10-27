@@ -15,7 +15,7 @@ body { background-color: #FFFFFF; font-family: 'Roboto', sans-serif; color: blac
 
 #img {position: relative; bottom: 5px;}
 .footer { background-color: #ebebea; padding: 20px; text-align: center; position: fixed; width: 100%; left: 0px; bottom:0; font-size: 15px; font-weight: bold;}
-#img1 {  display: flex ; justify-content: center; align-items: center; }
+#img1 {  display: flex ; justify-content: center; align-items: center; background-image: url("/g3-reciclar-tt/assets/Contenido_2.png"); margin-top: 100px; }
 
 
 .reciclarte { text-align:center; font-size: 40px; margin-top: 200px;} 
@@ -28,7 +28,7 @@ body { background-color: #FFFFFF; font-family: 'Roboto', sans-serif; color: blac
     flex-direction: column;
     align-items: center;
     justify-content: center; background-color: #ebebea; max-width: 600px;margin-left: 640px; margin-top: 200px; opacity: 0.8; border-radius: 7px; 
-    box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19); height: 600px; background-image: url("/g3-reciclar-tt/assets/") ;}
+    box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19); height: 600px; background-image: url("/g3-reciclar-tt/assets/Formulario-registro.png") ; margin-bottom: 100px;}
     .formulario {border-top: none; margin-top: 10px; margin-bottom: 10px;
         border-left: none;
         border-right: none;
@@ -56,7 +56,7 @@ body { background-color: #FFFFFF; font-family: 'Roboto', sans-serif; color: blac
     flex-direction: column;
     align-items: center;
 
-    justify-content: center; background-image: url(/g3-reciclar-tt/assets/Fondo_iniciosesion.png);; max-width: 500px;margin-left: 700px; margin-top: 200px; opacity: 0.8; border-radius: 7px; 
+    justify-content: center; background-image: url("/g3-reciclar-tt/assets/Fondo_iniciosesion.png");; max-width: 500px;margin-left: 700px; margin-top: 200px; opacity: 0.8; border-radius: 7px; 
 
     box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19); height: 500px; }
 
