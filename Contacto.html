@@ -10,23 +10,28 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap" rel="stylesheet">
-    
+
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+<link rel="stylesheet" href="js/bootstrap.min.js">
+
 </head>
 <body>
-    <header id="header"> 
-        <img src="https://proyecto-reciclarte.000webhostapp.com/assets/LogoReciclarte2.png" width="100px" id="img">
-    <nav id="navbar">
+    <header id="header" class="header"> 
+        <img src="https://proyecto-reciclarte.000webhostapp.com/assets/LogoReciclarte2.png" width="100px" id="img" class="img"> 
+    <nav id="navbar" class="navbar">
         <ul>
-            <li><a class= "navlink" href="https://proyecto-reciclarte.000webhostapp.com/index.html">Inicio</a></li>
-            <li><a class= "navlink" href="https://proyecto-reciclarte.000webhostapp.com/iniciosesion.html">Iniciar Sesion</a></li>
-            <li><a class= "navlink" href="https://proyecto-reciclarte.000webhostapp.com/Registrarse.html">Registrarse</a></li>
-            <li><a class= "navlink" href="https://proyecto-reciclarte.000webhostapp.com/Blog.html">Blog</a></li>
-            <li><a class= "navlink" href="https://proyecto-reciclarte.000webhostapp.com/Contacto.html">Contacto</a></li>
+            <li><a class= "navlink" id="navlink" href="https://proyecto-reciclarte.000webhostapp.com/index.html">Inicio</a></li>
+            <li><a class= "navlink" id="navlink" href="https://proyecto-reciclarte.000webhostapp.com/iniciosesion.html">Iniciar Sesion</a></li>
+            <li><a class= "navlink" id="navlink" href="https://proyecto-reciclarte.000webhostapp.com/Registrarse.html">Registrarse</a></li>
+            <li><a class= "navlink" id="navlink" href="https://proyecto-reciclarte.000webhostapp.com/Blog.html">Blog</a></li>
+            <li><a class= "navlink" id="navlink" href="https://proyecto-reciclarte.000webhostapp.com/Contacto.html">Contacto</a></li>
         </ul>
     </nav>
     </header>
          
-    <div class="container px-5 my-5 form-contacto " >
+
+    <div class="container px-5 my-5">
+
         <form id="contactForm" data-sb-form-api-token="API_TOKEN">
             <div class="form-floating mb-3">
                 <input class="form-control" id="nombre" type="text" placeholder="Nombre" data-sb-validations="required" />
@@ -67,17 +72,19 @@
     <script src="https://cdn.startbootstrap.com/sb-forms-latest.js"></script>
 
 
+
         <h1 class="titulo-blog">Contactanos!!</h1> 
         <div class="bajar-parrafos">
         <p class="parrafo-contactos"> <img src="/g3-reciclar-tt/assets/telephone.png" class="telefono" > teléfono : 351 408745</p>
         <p class="parrafo-contactos"> <img src="/g3-reciclar-tt/assets/mail.png" class="mail" >Email : reciclartecba@gmail.com</p>
         <p class="parrafo-contactos"> <img src="/g3-reciclar-tt/assets/facebook.png" class="facebook" >Facebook : reciclartecba</p>
         <p class="parrafo-contactos"> <img src="/g3-reciclar-tt/assets/instagram.png" class="instagram" >Instagram: reciclartecba</p>
+
         </div>
 
 
 
-        <footer class="footer" >
+        <footer class="footer" id="footer">
             © Cordoba Capital 2021
         </footer>
 </body>
