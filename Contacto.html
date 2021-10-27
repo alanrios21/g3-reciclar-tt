@@ -10,31 +10,83 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+<link rel="stylesheet" href="js/bootstrap.min.js">
+
 </head>
 <body>
-    <header id="header"> 
-        <img src="https://proyecto-reciclarte.000webhostapp.com/assets/LogoReciclarte2.png" width="100px" id="img">
-    <nav id="navbar">
+    <header id="header" class="header"> 
+        <img src="https://proyecto-reciclarte.000webhostapp.com/assets/LogoReciclarte2.png" width="100px" id="img" class="img"> 
+    <nav id="navbar" class="navbar">
         <ul>
+
             <li><a class= "navlink" href="index.html">Inicio</a></li>
             <li><a class= "navlink" href="iniciosesion.html">Iniciar Sesion</a></li>
             <li><a class= "navlink" href="Registrarse.html">Registrarse</a></li>
             <li><a class= "navlink" href="Blog.html">Blog</a></li>
             <li><a class= "navlink" href="Contacto.html">Contacto</a></li>
+
         </ul>
     </nav>
     </header>
          
+
+    <div class="container px-5 my-5">
+
+        <form id="contactForm" data-sb-form-api-token="API_TOKEN">
+            <div class="form-floating mb-3">
+                <input class="form-control" id="nombre" type="text" placeholder="Nombre" data-sb-validations="required" />
+                <label for="nombre">Nombre</label>
+                <div class="invalid-feedback" data-sb-feedback="nombre:required">Nombre is required.</div>
+            </div>
+            <div class="form-floating mb-3">
+                <input class="form-control" id="apellido" type="text" placeholder="Apellido" data-sb-validations="required" />
+                <label for="apellido">Apellido</label>
+                <div class="invalid-feedback" data-sb-feedback="apellido:required">Apellido is required.</div>
+            </div>
+            <div class="form-floating mb-3">
+                <input class="form-control" id="email" type="email" placeholder="Email" data-sb-validations="required,email" />
+                <label for="email">Email</label>
+                <div class="invalid-feedback" data-sb-feedback="email:required">Email is required.</div>
+                <div class="invalid-feedback" data-sb-feedback="email:email">Email Email is not valid.</div>
+            </div>
+            <div class="form-floating mb-3">
+                <textarea class="form-control" id="mensaje" type="text" placeholder="Mensaje" style="height: 10rem;" data-sb-validations="required"></textarea>
+                <label for="mensaje">Mensaje</label>
+                <div class="invalid-feedback" data-sb-feedback="mensaje:required">Mensaje is required.</div>
+            </div>
+            <div class="d-none" id="submitSuccessMessage">
+                <div class="text-center mb-3">
+                    <div class="fw-bolder">Form submission successful!</div>
+                    <p>To activate this form, sign up at</p>
+                    <a href="https://startbootstrap.com/solution/contact-forms">https://startbootstrap.com/solution/contact-forms</a>
+                </div>
+            </div>
+            <div class="d-none" id="submitErrorMessage">
+                <div class="text-center text-danger mb-3">Error sending message!</div>
+            </div>
+            <div class="d-grid">
+                <button class="btn btn-primary btn-lg disabled" id="submitButton" type="submit">Submit</button>
+            </div>
+        </form>
+    </div>
+    <script src="https://cdn.startbootstrap.com/sb-forms-latest.js"></script>
+
+
+
         <h1 class="titulo-blog">Contactanos!!</h1> 
         <div class="bajar-parrafos">
-        <p class="parrafo-contactos">Teléfono : 351 408745</p>
-        <p class="parrafo-contactos">Email : reciclartecba@gmail.com</p>
-        <p class="parrafo-contactos">Facebook : reciblartecba</p>
+        <p class="parrafo-contactos"> <img src="/g3-reciclar-tt/assets/telephone.png" class="telefono" > teléfono : 351 408745</p>
+        <p class="parrafo-contactos"> <img src="/g3-reciclar-tt/assets/mail.png" class="mail" >Email : reciclartecba@gmail.com</p>
+        <p class="parrafo-contactos"> <img src="/g3-reciclar-tt/assets/facebook.png" class="facebook" >Facebook : reciclartecba</p>
+        <p class="parrafo-contactos"> <img src="/g3-reciclar-tt/assets/instagram.png" class="instagram" >Instagram: reciclartecba</p>
+
         </div>
 
 
 
-        <footer class="footer" >
+        <footer class="footer" id="footer">
             © Cordoba Capital 2021
         </footer>
 </body>
