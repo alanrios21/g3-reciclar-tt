@@ -1,18 +1,18 @@
-body { background-color: #A4D86B; font-family: 'Roboto', sans-serif; color: black;}
-#header { background-color: #BDB16D; position: fixed; width: 100%;  top: 0px; left: 0px;  padding: 10px;  z-index: 1; margin-bottom : 100px; font-weight: bolder;} 
+body {  font-family: 'Roboto', sans-serif; color: #4EAF59;}
+#header { background-color: #ebebea; position: fixed; width: 100%;  top: 0px; left: 0px;  padding: 5px;  z-index: 1; margin-bottom : 100px; font-weight: bolder; } 
 #navbar ul {right: 20px;  position: fixed; top: 20px;}
 #navbar ul li {display: inline;}
 .navlink { text-decoration: none;  
-    color: white;
+    color: #4d5f3d;
     margin: 30px;
     padding: 6px 10px;
     border-radius: 10px;
     font-size: 22px;
    position: relative;
    top: 10px;} 
-#img {position: relative; bottom: 5px;}
+#img {position: relative; bottom: 5px; }
 .footer { background-color: #BDB16D; padding: 20px; text-align: center; position: fixed; width: 100%; left: 0px; bottom:0; font-size: 15px; font-weight: bold;}
-#img1 {  display: flex ; justify-content: center; align-items: center; }
+
 .reciclarte { text-align:center; font-size: 40px; margin-top: 200px;} 
 .p1 { padding-left: 40px; padding-right: 40px; font-size: 20px;} 
 .p2 { padding-left: 60px; padding-right: 40px; font-size: 20px;} 
@@ -32,7 +32,7 @@ body { background-color: #A4D86B; font-family: 'Roboto', sans-serif; color: blac
     .boton { width: 100%;
         outline: none;
         border: none;
-        background-color:#A4D86B;;
+        background-color:#A4D86B;
         max-width: 150px;
         border-radius: 5px;  padding-bottom: 10px;
         padding-top: 10px;
@@ -110,4 +110,31 @@ body { background-color: #A4D86B; font-family: 'Roboto', sans-serif; color: blac
     }
     .bajar-parrafos{
         margin-top: 250px;
+    }
+
+    .imagen-central{
+        background-image: url('/assets/Contenido_2.png'); 
+    background-size: cover;
+    background-repeat: no-repeat;
+    height: 800px;
+    margin-top: 60px;
+    margin-bottom: 60px;
+    
+    }
+    
+    .logo-img{
+        position: relative;
+        top: 5px;
+    }
+
+    ul {
+        list-style-position: inside;
+    }
+    
+    .navlink:hover{
+        color: white;
+    }
+
+    .container, .container-fluid, .container-lg, .container-md, .container-sm, .container-xl, .container-xxl{
+        padding-top: 150px;
     }
