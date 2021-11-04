@@ -1,6 +1,16 @@
+html,body
+{
+    width: 100%;
+    height: 100%;
+    margin: 0px;
+    padding: 0px;
+    overflow-x: hidden; 
+    background-color: #FFFFFF; font-family: 'Roboto', sans-serif; color: black;
+}
 
-body { background-color: #FFFFFF; font-family: 'Roboto', sans-serif; color: black;}
-#header { background-color: #ebebea; position: fixed; width: 100%;  top: 0px; left: 0px;  padding: 10px;  z-index: 1; margin-bottom : 300px; font-weight: bolder;} 
+
+
+#header { background-color: #ebebea; position: fixed; width: 100%;  top: 0px; left: 0px;  padding: 10px;  z-index: 1; margin-bottom : 300px; } 
 
 #navbar ul {right: 20px;  position: fixed; top: 20px;}
 #navbar ul li {display: inline;}
@@ -11,11 +21,13 @@ body { background-color: #FFFFFF; font-family: 'Roboto', sans-serif; color: blac
     border-radius: 10px;
     font-size: 22px;
    position: relative;
-   top: 10px;} 
+   top: 10px;
+} 
 
-#img {position: relative; bottom: 5px;}
+
+#img {position: relative; bottom: 5px; }
 .footer { background-color: #ebebea; padding: 20px; text-align: center; position: fixed; width: 100%; left: 0px; bottom:0; font-size: 15px; font-weight: bold;}
-#img1 {  display: flex ; justify-content: center; align-items: center; background-image: url("/g3-reciclar-tt/assets/Contenido_2.png"); margin-top: 100px; }
+
 
 
 .reciclarte { text-align:center; font-size: 40px; margin-top: 200px;} 
@@ -56,7 +68,7 @@ body { background-color: #FFFFFF; font-family: 'Roboto', sans-serif; color: blac
     flex-direction: column;
     align-items: center;
 
-    justify-content: center; background-image: url("/g3-reciclar-tt/assets/Fondo_iniciosesion.png");; max-width: 500px;margin-left: 700px; margin-top: 200px; opacity: 0.8; border-radius: 7px; 
+    justify-content: center; background-image: url("/g3-reciclar-tt/assets/Fondo_iniciosesion.png"); max-width: 500px;margin-left: 700px; margin-top: 200px; opacity: 0.8; border-radius: 7px; 
 
     box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19); height: 500px; }
 
@@ -134,15 +146,9 @@ body { background-color: #FFFFFF; font-family: 'Roboto', sans-serif; color: blac
     .ecologia { text-align: right;position: relative; right: 120px;}
     .sitios {text-align: center;}
 
-    .imagen-central{
-        background-image: url('/assets/Contenido_2.png'); 
-    background-size: cover;
-    background-repeat: no-repeat;
-    height: 800px;
-    margin-top: 60px;
-    margin-bottom: 60px;
-    
-    }
+   .imagen-central{
+       display: flex ; justify-content: center; align-items: center; background-image: url("/g3-reciclar-tt/assets/Contenido_2.png");  margin-top: 100px; background-size: 2500px; height: 800px; background-repeat: no-repeat; width: 100%;
+   }
     
     .logo-img{
         position: relative;
