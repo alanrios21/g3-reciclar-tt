@@ -1,0 +1,147 @@
+SET @OLD_UNIQUE_CHECKS=@@UNIQUE_CHECKS,
+UNIQUE_CHECKS=0;
+SET @OLD_FOREIGN_KEY_CHECKS=@@FOREIGN_KEY_CHECKS,
+FOREIGN_KEY_CHECKS=0;
+SET @OLD_SQL_MODE=@@SQL_MODE,
+SQL_MODE='ONLY_FULL_GROUP_BY,STRICT_TRANS_TABLES,NO_ZER
+O_IN_DATE,NO_ZERO_DATE,ERROR_FOR_DIVISION_BY_ZERO,NO_ENGI
+NE_SUBSTITUTION';
+-- -----------------------------------------------------
+-- Schema mydb
+-- -----------------------------------------------------
+-- -----------------------------------------------------
+-- Schema mydb
+-- -----------------------------------------------------
+CREATE SCHEMA IF NOT EXISTS `mydb` DEFAULT CHARACTER SET
+utf8mb4 COLLATE utf8mb4_0900_ai_ci ;
+USE `mydb` ;
+-- -----------------------------------------------------
+-- Table `mydb`.`provincia`
+-- -----------------------------------------------------
+DROP TABLE IF EXISTS `mydb`.`provincia` ;
+CREATE TABLE IF NOT EXISTS `mydb`.`provincia` (
+ `id_Provincia` INT NOT NULL AUTO_INCREMENT,
+ `nombre_provincia` VARCHAR(45) NOT NULL,
+ PRIMARY KEY (`id_Provincia`),
+ UNIQUE INDEX `id_Provincia_UNIQUE` (`id_Provincia` ASC) VISIBLE)
+ENGINE = InnoDB
+AUTO_INCREMENT = 4
+DEFAULT CHARACTER SET = utf8mb3;
+-- -----------------------------------------------------
+-- Table `mydb`.`ciudad`
+-- -----------------------------------------------------
+DROP TABLE IF EXISTS `mydb`.`ciudad` ;
+CREATE TABLE IF NOT EXISTS `mydb`.`ciudad` (
+ `id_Ciudad` INT NOT NULL AUTO_INCREMENT,
+ `nombre_ciudad` VARCHAR(45) NOT NULL,
+ `codigo_postal` INT NOT NULL,
+ `barrio` VARCHAR(45) NOT NULL,
+ `id_Provincia` INT NOT NULL,
+ PRIMARY KEY (`id_Ciudad`),
+ UNIQUE INDEX `id_Ciudad_UNIQUE` (`id_Ciudad` ASC) VISIBLE,
+ INDEX `id_Provincia_idx` (`id_Provincia` ASC) VISIBLE,
+ CONSTRAINT `id_Provincia`
+ FOREIGN KEY (`id_Provincia`)
+ REFERENCES `mydb`.`provincia` (`id_Provincia`))
+ENGINE = InnoDB
+AUTO_INCREMENT = 6
+DEFAULT CHARACTER SET = utf8mb3;
+-- -----------------------------------------------------
+-- Table `mydb`.`pais`
+-- -----------------------------------------------------
+DROP TABLE IF EXISTS `mydb`.`pais` ;
+CREATE TABLE IF NOT EXISTS `mydb`.`pais` (
+ `id_Pais` INT NOT NULL AUTO_INCREMENT,
+ `nombre_pais` VARCHAR(45) NOT NULL,
+ PRIMARY KEY (`id_Pais`),
+ UNIQUE INDEX `id_Pais_UNIQUE` (`id_Pais` ASC) VISIBLE)
+ENGINE = InnoDB
+AUTO_INCREMENT = 2
+DEFAULT CHARACTER SET = utf8mb3;
+-- -----------------------------------------------------
+-- Table `mydb`.`usuarios`
+-- -----------------------------------------------------
+DROP TABLE IF EXISTS `mydb`.`usuarios` ;
+CREATE TABLE IF NOT EXISTS `mydb`.`usuarios` (
+ `id_Usuario` INT NOT NULL AUTO_INCREMENT,
+ `nombre` VARCHAR(45) NOT NULL,
+ `apellido` VARCHAR(45) NOT NULL,
+ `fecha_nac` DATETIME NOT NULL,
+ `password` VARCHAR(45) NOT NULL,
+ `telefono` INT NOT NULL,
+ `id_Ciudad` INT NOT NULL,
+ `mail` VARCHAR(45) NULL DEFAULT NULL,
+ `edad` INT NULL DEFAULT NULL,
+ PRIMARY KEY (`id_Usuario`),
+ UNIQUE INDEX `idUsuarios_UNIQUE` (`id_Usuario` ASC) VISIBLE,
+ INDEX `id_Ciudad_idx` (`id_Ciudad` ASC) VISIBLE,
+ CONSTRAINT `id_Ciudad`
+ FOREIGN KEY (`id_Ciudad`)
+ REFERENCES `mydb`.`ciudad` (`id_Ciudad`))
+ENGINE = InnoDB
+AUTO_INCREMENT = 9
+DEFAULT CHARACTER SET = utf8mb3;
+-- -----------------------------------------------------
+-- Table `mydb`.`empresa`
+-- -----------------------------------------------------
+DROP TABLE IF EXISTS `mydb`.`empresa` ;
+CREATE TABLE IF NOT EXISTS `mydb`.`empresa` (
+ `id_Empresa` INT NOT NULL AUTO_INCREMENT,
+ `cuit` VARCHAR(45) NULL DEFAULT NULL,
+ `nombre_empresa` VARCHAR(45) NOT NULL,
+ `inicio_actividad` DATETIME NOT NULL,
+ `id_Pais` INT NOT NULL,
+ `password_empresa` VARCHAR(45) NOT NULL,
+ `mail` VARCHAR(45) NOT NULL,
+ `telefono_empresa` INT NOT NULL,
+ `id_Usuario` INT NULL,
+ PRIMARY KEY (`id_Empresa`),
+ UNIQUE INDEX `id_Empresa_UNIQUE` (`id_Empresa` ASC) VISIBLE,
+ INDEX `id_Pais_idx` (`id_Pais` ASC) VISIBLE,
+ INDEX `idUsuario_idx` (`id_Usuario` ASC) VISIBLE,
+ CONSTRAINT `idPaisEmpresa`
+ FOREIGN KEY (`id_Pais`)
+ REFERENCES `mydb`.`pais` (`id_Pais`),
+ CONSTRAINT `idUsuario`
+ FOREIGN KEY (`id_Usuario`)
+ REFERENCES `mydb`.`usuarios` (`id_Usuario`)
+ ON DELETE NO ACTION
+ ON UPDATE NO ACTION)
+ENGINE = InnoDB
+AUTO_INCREMENT = 2
+DEFAULT CHARACTER SET = utf8mb3;
+-- -----------------------------------------------------
+-- Table `mydb`.`puntos_verdes`
+-- -----------------------------------------------------
+DROP TABLE IF EXISTS `mydb`.`puntos_verdes` ;
+CREATE TABLE IF NOT EXISTS `mydb`.`puntos_verdes` (
+ `id_Puntos_Verdes` INT NOT NULL AUTO_INCREMENT,
+ `detalle` VARCHAR(45) NOT NULL,
+ `horario` TIME NOT NULL,
+ `ambiente` VARCHAR(45) NOT NULL,
+ PRIMARY KEY (`id_Puntos_Verdes`),
+ UNIQUE INDEX `id_Puntos_Verdes_UNIQUE` (`id_Puntos_Verdes` ASC)
+VISIBLE)
+ENGINE = InnoDB
+AUTO_INCREMENT = 2
+DEFAULT CHARACTER SET = utf8mb3;
+-- -----------------------------------------------------
+-- Table `mydb`.`punto_verde_provincia`
+-- -----------------------------------------------------
+DROP TABLE IF EXISTS `mydb`.`punto_verde_provincia` ;
+CREATE TABLE IF NOT EXISTS `mydb`.`punto_verde_provincia` (
+ `id_Provincia` INT NOT NULL,
+ `id_Puntos_Verdes` INT NOT NULL,
+ INDEX `id_Puntos_Verdes_idx` (`id_Puntos_Verdes` ASC) VISIBLE,
+ INDEX `id_Provincia_idx` (`id_Provincia` ASC) VISIBLE,
+ CONSTRAINT `idProvincia`
+ FOREIGN KEY (`id_Provincia`)
+ REFERENCES `mydb`.`provincia` (`id_Provincia`),
+ CONSTRAINT `idPuntosVerdes`
+ FOREIGN KEY (`id_Puntos_Verdes`)
+ REFERENCES `mydb`.`puntos_verdes` (`id_Puntos_Verdes`))
+ENGINE = InnoDB
+DEFAULT CHARACTER SET = utf8mb3;
+SET SQL_MODE=@OLD_SQL_MODE;
+SET FOREIGN_KEY_CHECKS=@OLD_FOREIGN_KEY_CHECKS;
+SET UNIQUE_CHECKS=@OLD_UNIQUE_CHECKS;

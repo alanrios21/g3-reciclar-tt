@@ -4,38 +4,47 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Reciclarte</title>
-    
-    <link rel="icon" href="assets/logo-reciclarte.jpg" type="imagen/jpg">
+    <title>Reciclarte</title> 
+    <link rel="stylesheet" href="css/styles.css"> 
+    <link rel="icon" href="/assets/logo-reciclarte.jpg" type="imagen/jpg">
     <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="css/styles.css">
+<link href="css/bootstrap.min.css">
+<link href="js/bootstrap.min.js">
+<script src="js/script.js" defer></script>
 </head>
 <body>
-    <header id="header"> 
-        <img src="assets/LogoReciclarte2.png" class="logo-img" width="100px" id="img">
-    <nav id="navbar">
+    
+   
+
+     <header id="header" class="header"> 
+        
+        <img src="/assets/LogoReciclarte2.png" class="logo-img" width="100px" id="img">
+    <nav id="navbar" class="navbar">
         <ul>
-            <li><a class= "navlink" href="https://proyecto-reciclarte.000webhostapp.com/index.html">Inicio</a></li>
-            <li><a class= "navlink" href="https://proyecto-reciclarte.000webhostapp.com/iniciosesion.html">Iniciar Sesion</a></li>
-            <li><a class= "navlink" href="https://proyecto-reciclarte.000webhostapp.com/Registrarse.html">Registrarse</a></li>
-            <li><a class= "navlink" href="https://proyecto-reciclarte.000webhostapp.com/Blog.html">Blog</a></li>
-            <li><a class= "navlink" href="https://proyecto-reciclarte.000webhostapp.com/Contacto.html">Contacto</a></li>
+            <li><a class= "navlink"  href="index.html">Inicio</a></li>
+            <li><a class= "navlink"  href="iniciosesion.html">Iniciar Sesion</a></li>
+            <li><a class= "navlink"  href="Registrarse.html">Registrarse</a></li>
+            <li><a class= "navlink"  href="Blog.html">Blog</a></li>
+            <li><a class= "navlink"  href="Contacto.html">Contacto</a></li>
         </ul>
     </nav>
-    </header>
-    <div>
+    <div id="menu-toggle" class="menu-toggle">
+        <div class="hamburger"></div>
+      </div>
+    </header> 
+    
         
-        <div id="img1" height="800px" width="100%" > 
-          <div class="imagen-central"></div>
+        <div id="img1" class="img1" > 
+          <div class="imagen-central" id="imagen-central" ></div>
 
  
-      </div>
-        <p class="p1">
+      
+        <p class="p1" id="p1">
             El proceso de reciclaje es una actividad que ayuda a solucionar los problemas ocasionados por los millones de toneladas de desechos sólidos, que producimos a diario los seres humanos en todo el mundo. Reciclar supone contribuir a proteger el medioambiente para detener la contaminación ambiental.
         </p> 
-         <p class="p1">
+         <p class="p1" id="p1">
             Reciclar supone contribuir a proteger el medioambiente para detener la contaminación ambiental. Colaborar con la recogida, la separación y el reciclaje, es una forma distinta de concebir la vida.
         </p> 
         <!--
@@ -43,21 +52,21 @@
         --> 
     </div>
     <div>
-        <h2 class="p3">
+        <h2 class="p3" id="p3">
             ¿Porque Reciclar?
         </h2>
-        <p class="p1" >
+        <p class="p1" id="p3" >
             Son muchas las razones para reciclar:
-        <ol class="p2">
-            <li>Ahorra recursos</li>
-            <li>Disminuye la contaminación.</li>
-            <li>Alarga la vida de los materiales, aunque sea con diferentes usos.</li>
-            <li>Logra ahorrar energía.</li>
-            <li>Evita la deforestación.</li>
-            <li>Reduce el 80 % del espacio que ocupan los desperdicios al convertirse en basura.</li>
-            <li>Puede disminuir el pago de impuestos por concepto de recogida de basura.</li>
-            <li>Genera empleo y riqueza.</li>
-        </ol>
+        <ul class="p2" id="p2">
+            <li class="li">Ahorra recursos</li>
+            <li class="li">Disminuye la contaminación.</li>
+            <li class="li">Alarga la vida de los materiales, aunque sea con diferentes usos.</li>
+            <li class="li">Logra ahorrar energía.</li>
+            <li class="li">Evita la deforestación.</li>
+            <li class="li">Reduce el 80 % del espacio que ocupan los desperdicios al convertirse en basura.</li>
+            <li class="li">Puede disminuir el pago de impuestos por concepto de recogida de basura.</li>
+            <li class="li">Genera empleo y riqueza.</li>
+        </ul>
         
         </p>
          <!--
@@ -65,21 +74,23 @@
         --> 
     </div>
     <div>
-        <h3 class="p3" >
+        <h3 class="p3" id="p3">
             ¿Como comenzar a cuidar el planeta?
         </h3>
         <!--
           Derivar al blog
         --> 
-        <p class="p1 prueba1"> 
+        <p class="p1 prueba1" id="prueba1"> 
 
-            <a class="boton3" href="https://proyecto-reciclarte.000webhostapp.com/Blog.html">Ingrese a nuestro Blog</a></li>
+
+            <a href="Blog.html"><img src="/assets/imagen-blog.png" alt="" > </a>
+
 
             </p>
     </div>
     
    
-    <footer class="footer">
+    <footer class="footer" id="footer">
         © Cordoba Capital 2021
     </footer>
 </body>
