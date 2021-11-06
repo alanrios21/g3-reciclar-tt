@@ -10,19 +10,105 @@ html,body
 
 
 
-#header { background-color: #ebebea; position: fixed; width: 100%;  top: 0px; left: 0px;  padding: 10px;  z-index: 1; margin-bottom : 300px; } 
+#header { background-color: #ebebea;
+    position: fixed;
+    left: 0;
+    top: 0;
+    z-index: 1;
+    right: 0;
+    width: 100%;
+    max-width: 1895px;
+    border: none; 
+    padding-bottom: 43px;
+    height: 75px;
+    color:#4d5f3d;
+    } 
 
-#navbar ul {right: 20px;  position: fixed; top: 20px;}
-#navbar ul li {display: inline;}
-.navlink { text-decoration: none;  
-    color: #4d5f3d;
-    margin: 30px;
-    padding: 6px 10px;
-    border-radius: 10px;
-    font-size: 22px;
-   position: relative;
-   top: 10px;
-} 
+.navbar{
+  top: 98%;
+  width: 100%;
+  height: 2000px;
+  background: #ebebea;
+  right: 0;
+  position: absolute;
+  clip-path: circle(0px at top right);
+  transition: clip-path ease-in-out 700ms; 
+  
+}
+
+.navbar-open {
+    clip-path: circle(150% at top right);
+    top: 100%;
+    width: 100%;
+    height: 2000px;
+    background: #ebebea
+  }
+
+  .navbar ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    position: relative;
+    top: 50px;
+    text-align: center;
+    font-size: 23px; 
+    
+  }
+  
+  .navbar ul li a{
+    color:#4d5f3d;
+}
+
+
+
+
+  .navbar a {
+    
+    display: block;
+    padding: 1em 4em;
+    text-decoration: none; 
+  }
+  
+  .menu-toggle {
+    padding-bottom: 1em;
+    padding-top: 0.8em;
+    padding-left: 1em;
+    padding-right: 1em;
+    position: absolute;
+    top: 1.6em;
+    right: 0em;
+    cursor: pointer; 
+  }
+  
+  .menu-open .hamburger {
+    transform: rotate(45deg);
+  }
+  
+  .menu-open .hamburger::before {
+    opacity: 0;
+  }
+  
+  .menu-open .hamburger::after {
+    transform: translateY(-3px) rotate(-90deg);
+  }
+  
+  .hamburger,
+  .hamburger::before,
+  .hamburger::after {
+    content: "";
+    display: block;
+    background: #4d5f3d;
+    height: 3px;
+    width: 1.75em;
+    border-radius: 16px;
+    transition: all ease-in-out 500ms;
+  }
+  .hamburger::before {
+    transform: translateY(-6px);
+  }
+  .hamburger::after {
+    transform: translateY(3px);
+  }
 
 
 #img {position: relative; bottom: 5px; }
@@ -40,7 +126,7 @@ html,body
     flex-direction: column;
     align-items: center;
     justify-content: center; background-color: #ebebea; max-width: 600px;margin-left: 640px; margin-top: 200px; opacity: 0.8; border-radius: 7px; 
-    box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19); height: 600px; background-image: url("/g3-reciclar-tt/assets/Formulario-registro.png") ; margin-bottom: 100px;}
+    box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19); height: 600px; background-image: url("/assets/Formulario-registro.png") ; margin-bottom: 100px;}
     .formulario {border-top: none; margin-top: 10px; margin-bottom: 10px;
         border-left: none;
         border-right: none;
@@ -68,7 +154,7 @@ html,body
     flex-direction: column;
     align-items: center;
 
-    justify-content: center; background-image: url("/g3-reciclar-tt/assets/Fondo_iniciosesion.png"); max-width: 500px;margin-left: 700px; margin-top: 200px; opacity: 0.8; border-radius: 7px; 
+    justify-content: center; background-image: url("/assets/Fondo_iniciosesion.png"); max-width: 500px;margin-left: 700px; margin-top: 200px; opacity: 0.8; border-radius: 7px; 
 
     box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19); height: 500px; }
 
@@ -138,7 +224,7 @@ html,body
     .mail{width:30px; position: relative; top:5px; right: 5px;}
     .facebook {width:30px; position: relative; top:5px; right: 5px;}
     .instagram {width:30px; position: relative; top:5px; right: 5px;}
-    .form-contacto{background-image: url("/g3-reciclar-tt/assets/Fondo.png");}
+    .form-contacto{background-image: url("/assets/Fondo.png");}
     .container {margin-top: 600px;}
     .img-thumbnail {width: 350px;}
     .noticias {position: relative; top: 120px; left:120px}
@@ -147,23 +233,84 @@ html,body
     .sitios {text-align: center;}
 
    .imagen-central{
-       display: flex ; justify-content: center; align-items: center; background-image: url("/g3-reciclar-tt/assets/Contenido_2.png");  margin-top: 100px; background-size: 2500px; height: 800px; background-repeat: no-repeat; width: 100%;
+       display: flex ; justify-content: center; align-items: center; background-image: url("/assets/Contenido_2.png");  margin-top: 100px; background-size: 2500px; height: 800px; background-repeat: no-repeat; width: 100%;
    }
     
-    .logo-img{
-        position: relative;
-        top: 5px;
-    }
-
     ul {
         list-style-position: inside;
     }
     
-    .navlink:hover{
-        color: white;
-    }
-
+   
+     
+   
     .container, .container-fluid, .container-lg, .container-md, .container-sm, .container-xl, .container-xxl{
         padding-top: 150px;
     }
 
+    @media (min-width: 947px){
+        .menu-toggle {
+          display: none;
+      }
+      
+      .navbar {
+          
+         background: transparent;
+          position: relative;
+          float: right;
+          margin-right: 10px;
+          clip-path: initial;
+          text-align: right;
+          padding-right: 30px;
+         
+      }
+      
+      .navbar li {
+          display: inline-block;
+          border: none;
+          position: relative;
+          bottom: 130px;
+          
+         
+      }
+
+      .navbar ul li a{
+        color:#4d5f3d;
+    }
+    
+      
+      .navbar a {
+          padding: 0;
+          margin-left: 3em;
+          text-decoration: none;
+      }
+      
+     
+      
+      .navbar a:hover,
+      .navbar a:focus {
+          background: transparent;
+       }
+      
+       .header-logo {
+        
+        position: relative;
+        top: 5px;
+        
+       }
+      
+       .navbar ul {
+        position: relative;
+        top: 0px;
+        left: 0px;
+        font-size: 16px;
+        width: 100%;
+        text-align: right;
+       
+      }
+      
+       header{
+         padding-bottom: 20px;
+         height: auto;
+       }
+      }
+      
