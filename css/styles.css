@@ -1,39 +1,27 @@
 html,body
 {
-    width: 100%;
-    height: 100%;
     margin: 0px;
     padding: 0px;
-    overflow-x: hidden; 
-    background-color: #FFFFFF; font-family: 'Roboto', sans-serif; color: black;
+    background-color: #FFFFFF; 
+    font-family: 'Roboto', sans-serif; 
+    color: black;
 }
-
-
 
 #header { background-color: #ebebea;
     position: fixed;
-    left: 0;
     top: 0;
-    z-index: 1;
-    right: 0;
     width: 100%;
-    max-width: 1895px;
-    border: none; 
-    padding-bottom: 43px;
-    height: 75px;
-    color:#4d5f3d;
+    height: 100px;
+    z-index: 1;
     } 
 
-.navbar{
-  top: 98%;
-  width: 100%;
+.navbar {
   height: 2000px;
   background: #ebebea;
-  right: 0;
-  position: absolute;
   clip-path: circle(0px at top right);
   transition: clip-path ease-in-out 700ms; 
-  
+  position: relative;
+  top: -10px;
 }
 
 .navbar-open {
@@ -41,18 +29,17 @@ html,body
     top: 100%;
     width: 100%;
     height: 2000px;
-    background: #ebebea
+    background: #ebebea;
+    position: relative;
+    top: -10px;
   }
 
   .navbar ul {
-    margin: 0;
-    padding: 0;
     list-style: none;
-    position: relative;
-    top: 50px;
     text-align: center;
     font-size: 23px; 
-    
+    margin: 0;
+    padding: 0;
   }
   
   .navbar ul li a{
@@ -111,7 +98,6 @@ html,body
   }
 
 
-#img {position: relative; bottom: 5px; }
 .footer { background-color: #ebebea; padding: 20px; text-align: center; position: fixed; width: 100%; left: 0px; bottom:0; font-size: 15px; font-weight: bold;}
 
 
@@ -126,7 +112,7 @@ html,body
     flex-direction: column;
     align-items: center;
     justify-content: center; background-color: #ebebea; max-width: 600px;margin-left: 640px; margin-top: 200px; opacity: 0.8; border-radius: 7px; 
-    box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19); height: 600px; background-image: url("/assets/Formulario-registro.png") ; margin-bottom: 100px;}
+    box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19); height: 600px; background-image: url("../img/Formulario-registro.png") ; margin-bottom: 100px;}
     .formulario {border-top: none; margin-top: 10px; margin-bottom: 10px;
         border-left: none;
         border-right: none;
@@ -148,15 +134,34 @@ html,body
         align-items: center;
         justify-content: center;
         margin-top: 10px; margin-left: 15px;
-    cursor: pointer; }
-.form2 {width: 100%;
+        cursor: pointer; }
+
+.container-fluid {
+  width: 1200px;
+}
+
+.flex {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.form2 {
+    width: 500px;
     display: flex;
-    flex-direction: column;
+    flex-flow: column wrap;
     align-items: center;
-
-    justify-content: center; background-image: url("/assets/Fondo_iniciosesion.png"); max-width: 500px;margin-left: 700px; margin-top: 200px; opacity: 0.8; border-radius: 7px; 
-
-    box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19); height: 500px; }
+    justify-content: center; 
+    background-image: url(../img/Fondo_iniciosesion.png);
+    background-repeat: no-repeat;
+    opacity: 0.8; 
+    border-radius: 7px; 
+    background-size: contain;
+    background-position: center center;
+    box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    height: 500px;
+  }
 
 .aviso { background-color:#ebebea; width: 100%; max-width: 500px; padding: 5px; text-align: center; display: flex; justify-content: center;align-items: center; margin-left: 695px; 
     margin-top: 50px ; border-radius: 7px;box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2); }
@@ -224,27 +229,35 @@ html,body
     .mail{width:30px; position: relative; top:5px; right: 5px;}
     .facebook {width:30px; position: relative; top:5px; right: 5px;}
     .instagram {width:30px; position: relative; top:5px; right: 5px;}
-    .form-contacto{background-image: url("/assets/Fondo.png");}
+    .form-contacto{background-image: url("../img/Fondo.png");}
     .container {margin-top: 600px;}
     .img-thumbnail {width: 350px;}
     .noticias {position: relative; top: 120px; left:120px}
     .compostar { text-align: center; position: relative; top: 60px;}
     .ecologia { text-align: right;position: relative; right: 120px;}
     .sitios {text-align: center;}
-
-   .imagen-central{
-       display: flex ; justify-content: center; align-items: center; background-image: url("/assets/Contenido_2.png");  margin-top: 100px; background-size: 2500px; height: 800px; background-repeat: no-repeat; width: 100%;
-   }
     
     ul {
         list-style-position: inside;
     }
+
+    .imagen-principal {
+      margin-top: 100px;
+    }
     
-   
+    
+    .imagen-principal__contenido {
+      height: 100%;
+      width: 100%;
+    }
      
    
     .container, .container-fluid, .container-lg, .container-md, .container-sm, .container-xl, .container-xxl{
         padding-top: 150px;
+    }
+
+    .inicio-blog {
+      width: 50%;
     }
 
     @media (min-width: 947px){
@@ -252,25 +265,20 @@ html,body
           display: none;
       }
       
-      .navbar {
-          
-         background: transparent;
-          position: relative;
-          float: right;
-          margin-right: 10px;
-          clip-path: initial;
-          text-align: right;
-          padding-right: 30px;
-         
+      #navbar {
+        top: 40px;
+        height: auto;
+        position: relative;
+        background: transparent;
+        float: right;
+        margin-right: 10px;
+        clip-path: initial;
+        text-align: right;
+        padding-right: 30px;
       }
-      
+
       .navbar li {
-          display: inline-block;
-          border: none;
-          position: relative;
-          bottom: 130px;
-          
-         
+          display: inline-block;         
       }
 
       .navbar ul li a{
@@ -284,33 +292,20 @@ html,body
           text-decoration: none;
       }
       
-     
-      
       .navbar a:hover,
       .navbar a:focus {
           background: transparent;
        }
       
-       .header-logo {
-        
-        position: relative;
-        top: 5px;
-        
-       }
-      
        .navbar ul {
-        position: relative;
-        top: 0px;
-        left: 0px;
         font-size: 16px;
-        width: 100%;
         text-align: right;
-       
       }
       
-       header{
-         padding-bottom: 20px;
-         height: auto;
-       }
-      }
+    }
       
+.titulo-registro {
+  position: relative;
+  top: 140px;
+  text-align: center;
+}
