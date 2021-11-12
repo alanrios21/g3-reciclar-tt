@@ -4,34 +4,39 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Reciclarte</title>
-    <link rel="stylesheet" href="css/styles.css">
-    <link rel="icon" href="/g3-reciclar-tt/assets/LogoReciclarte2.png" type="imagen/png">
+    <title>Reciclarte</title> 
+    <link rel="stylesheet" href="css/styles.css"> 
+    <link rel="icon" href="/img/logo-reciclarte.jpg" type="imagen/jpg">
     <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap" rel="stylesheet">
-    <link href="css/bootstrap.min.css">
-<link href="js/bootstrap.min.js">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/bootstrap.min.css">
+<script src="js/bootstrap.min.js"></script> 
+<script src="js/script.js" defer></script>
 </head>
 <body>
-    <header id="header" class="header"> 
-        <a href="index.html"><img src="/g3-reciclar-tt/assets/LogoReciclarte2.png" width="100px" id="img" class="img"></a>
-    <nav id="navbar" class="navbar">
+    
+   
+
+     <header id="header" class="header"> 
+        
+        <img src="/img/LogoReciclarte2.png" class="logo-img" width="100px" id="img">
+    <nav id="navbar-style" class="navbar-style">
         <ul>
-
-            <li><a class= "navlink" href="index.html">Inicio</a></li>
-            <li><a class= "navlink" href="iniciosesion.html">Iniciar Sesion</a></li>
-            <li><a class= "navlink" href="Registrarse.html">Registrarse</a></li>
-            <li><a class= "navlink" href="Blog.html">Blog</a></li>
-            <li><a class= "navlink" href="Contacto.html">Contacto</a></li>
-
+            <li><a class= "navlink"  href="index.html">Inicio</a></li>
+            <li><a class= "navlink"  href="iniciosesion.html">Iniciar Sesion</a></li>
+            <li><a class= "navlink"  href="Registrarse.html">Registrarse</a></li>
+            <li><a class= "navlink"  href="Blog.html">Blog</a></li>
+            <li><a class= "navlink"  href="Contacto.html">Contacto</a></li>
         </ul>
     </nav>
-    </header>
+    <div id="menu-toggle" class="menu-toggle">
+        <div class="hamburger"></div>
+      </div>
+    </header> 
 
-        <section class="container-fluid">
-<h3>Iniciar Sesión</h3>
-<div class="shadow">
+        <section class="container-fluid grid">
+<h3 class="title">Iniciar Sesión</h3>
 <div class="form2" id="form2" >
 <form> <label class="label" id="label" for="text"> Usuario </label> <br>
     <input class="formulario" type="text" id="formulario" required >  <br>
@@ -40,8 +45,9 @@
     <button class="boton" type="submit" id="boton"> Acceder </button> <br>
  
 </form>
+
 </div>
-</div>
+
 <div class="aviso" id="aviso">
     
     <p> Si no está registrado haga clic en el botón registrarse </p>
@@ -49,8 +55,8 @@
 <a href="Registrarse.html" class="boton2" id="boton2"> Registrarse </a> <br>
 
         </section>
-        <footer class="footer">
-            © CORDOBA Capital 2021
+        <footer id="footer" class="footer">
+         <p>© CORDOBA Capital 2021</p> 
         </footer>
 </body>
 

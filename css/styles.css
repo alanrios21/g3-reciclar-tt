@@ -1,6 +1,5 @@
-html,body
-{
-    margin: 0px;
+html,body {
+   margin: 0px;
     padding: 0px;
     background-color: #FFFFFF; 
     font-family: 'Roboto', sans-serif; 
@@ -15,7 +14,7 @@ html,body
     z-index: 1;
     } 
 
-.navbar {
+.navbar-style {
   height: 2000px;
   background: #ebebea;
   clip-path: circle(0px at top right);
@@ -24,7 +23,7 @@ html,body
   top: -10px;
 }
 
-.navbar-open {
+.navbar-style-open {
     clip-path: circle(150% at top right);
     top: 100%;
     width: 100%;
@@ -34,7 +33,7 @@ html,body
     top: -10px;
   }
 
-  .navbar ul {
+  .navbar-style ul {
     list-style: none;
     text-align: center;
     font-size: 23px; 
@@ -42,14 +41,11 @@ html,body
     padding: 0;
   }
   
-  .navbar ul li a{
+  .navbar-style ul li a{
     color:#4d5f3d;
 }
 
-
-
-
-  .navbar a {
+  .navbar-style a {
     
     display: block;
     padding: 1em 4em;
@@ -97,22 +93,36 @@ html,body
     transform: translateY(3px);
   }
 
+  .texto-carrusel {
+    font-size: 50px;
+  }
 
-.footer { background-color: #ebebea; padding: 20px; text-align: center; position: fixed; width: 100%; left: 0px; bottom:0; font-size: 15px; font-weight: bold;}
 
-
+.footer { background-color: #ebebea; padding: 20px; text-align: center; width: 100%; left: 0px; bottom:0; font-size: 15px; font-weight: bold;}
 
 .reciclarte { text-align:center; font-size: 40px; margin-top: 200px;} 
 .p1 { padding-left: 40px; padding-right: 40px; font-size: 20px;} 
 .p2 { padding-left: 60px; padding-right: 40px; font-size: 20px;} 
 .p3 { padding-left: 40px; padding-right: 40px; font-size: 30px;} 
 .prueba1 {margin-bottom: 100px;}
-.form {width: 100%;
+.form {
+    grid-row: 2 / 3;
+    width: 90%;
     display: flex;
     flex-direction: column;
     align-items: center;
-    justify-content: center; background-color: #ebebea; max-width: 600px;margin-left: 640px; margin-top: 200px; opacity: 0.8; border-radius: 7px; 
-    box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19); height: 600px; background-image: url("../img/Formulario-registro.png") ; margin-bottom: 100px;}
+    justify-content: center; 
+    background-color: #ebebea; 
+    max-width: 600px; 
+    opacity: 0.8; 
+    border-radius: 7px; 
+    box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19); 
+    height: 800px; 
+    background-image: url("../img/Formulario-registro.png");
+    background-size: cover;
+    background-repeat: no-repeat;
+    margin-bottom: 200px;
+  }
     .formulario {border-top: none; margin-top: 10px; margin-bottom: 10px;
         border-left: none;
         border-right: none;
@@ -137,17 +147,75 @@ html,body
         cursor: pointer; }
 
 .container-fluid {
-  width: 1200px;
+  width: 100%;
 }
 
-.flex {
-  display: flex;
-  flex-direction: column;
+.grid {
+  display: grid;
+  grid-template-columns: 1fr 3fr 1fr;
+  grid-template-rows: 1fr 3fr 1fr 1fr;
   justify-content: center;
+  align-content: center;
+  justify-items: center;
   align-items: center;
 }
 
+.title {
+  grid-column: 2 / 3;
+  grid-row: 1 / 2;
+  margin: 0;
+}
+
+.grid-registro {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: 1fr 3fr;
+  justify-content: center;
+  align-content: center;
+  justify-items: center;
+  align-items: center;
+}
+
+.titulo-registro {
+  grid-row: 1 / 2;
+}
+
+.consejos {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 1fr 4fr;
+  justify-items: center;
+}
+
+
+.subtitulo-blog-1 {
+  grid-column: 1 / 2;
+  grid-row: 1 / 2;
+}
+
+.subtitulo-blog-2 {
+  grid-column: 2 / 3;
+  grid-row: 1 / 2;
+}
+
+.sitios {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-rows: 1fr 1fr 4fr;
+  justify-content: center;
+  align-items: center;
+  align-content: center;
+  justify-items: center;
+}
+
+.sitios-titulo {
+  grid-column: 1 / 4;
+  grid-row: 1 / 2;
+}
+
 .form2 {
+    grid-column: 2 / 3;
+    grid-row: 2 / 3;
     width: 500px;
     display: flex;
     flex-flow: column wrap;
@@ -163,15 +231,31 @@ html,body
     height: 500px;
   }
 
-.aviso { background-color:#ebebea; width: 100%; max-width: 500px; padding: 5px; text-align: center; display: flex; justify-content: center;align-items: center; margin-left: 695px; 
-    margin-top: 50px ; border-radius: 7px;box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2); }
+.aviso { 
+  background-color:#ebebea; 
+  width: 100%;
+  max-width: 400px; 
+   padding: 5px; 
+   text-align: center; 
+   display: flex; 
+   justify-content: center;
+   align-items: center; 
+    border-radius: 7px;
+    box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2); 
+    grid-row: 3 / 4; 
+    grid-column: 2 / 3;
+  }
 
-.boton2 { width: 100%;
+.boton2 { 
+    grid-column: 2 / 3;
+    grid-row: 4 / 5;
+    width: 100%;
     outline: none;
     border: none;
     background-color:#ebebea;
     max-width: 150px;
-    border-radius: 5px;  padding-bottom: 10px;
+    border-radius: 5px;  
+    padding-bottom: 10px;
     padding-top: 10px;
     font-weight: 500;
     color: black;
@@ -179,7 +263,9 @@ html,body
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    margin-top: 50px; margin-left: 875px; margin-bottom: 50px; text-decoration: none; }
+    text-decoration: none; 
+    margin-bottom: 100px;
+  }
     .boton3 { width: 100%;
         outline: none;
         border: none;
@@ -196,24 +282,10 @@ html,body
         margin-top: 50px; margin-left: 800px; margin-bottom: 50px; text-decoration: none; }
     .titulo-blog{
         text-align: center;
-        margin-top: 200px;
         font-size: 40px;
+        grid-column: 1 / 4;
+        grid-row: 1 / 2;
        
-    }
-    .subtitulo-blog{
-        font-size: 30px;
-        text-align: center;
-    }
-
-    .centrar-img{
-        display: flex ;
-        justify-content: center;
-        align-items: center;
-        flex-direction: column;
-    }
-
-    .clase-img{
-        margin-bottom: 100px;
     }
 
     .parrafo-contactos{
@@ -232,10 +304,9 @@ html,body
     .form-contacto{background-image: url("../img/Fondo.png");}
     .container {margin-top: 600px;}
     .img-thumbnail {width: 350px;}
-    .noticias {position: relative; top: 120px; left:120px}
-    .compostar { text-align: center; position: relative; top: 60px;}
-    .ecologia { text-align: right;position: relative; right: 120px;}
-    .sitios {text-align: center;}
+    .noticias {grid-column: 1 / 2; grid-row: 2 / 3;}
+    .compostar {grid-column: 2 / 3; grid-row: 2 / 3;}
+    .ecologia { grid-column: 3 / 4; grid-row: 2 / 3}
     
     ul {
         list-style-position: inside;
@@ -260,12 +331,17 @@ html,body
       width: 50%;
     }
 
+    .carousel-inner > .item > img {
+      width: 200px; 
+      height: 200px; 
+     }
+
     @media (min-width: 947px){
         .menu-toggle {
           display: none;
       }
       
-      #navbar {
+      #navbar-style {
         top: 40px;
         height: auto;
         position: relative;
@@ -277,35 +353,33 @@ html,body
         padding-right: 30px;
       }
 
-      .navbar li {
+      .navbar-style li {
           display: inline-block;         
       }
 
-      .navbar ul li a{
+      .navbar-style ul li a{
         color:#4d5f3d;
     }
     
       
-      .navbar a {
+      .navbar-style a {
           padding: 0;
           margin-left: 3em;
           text-decoration: none;
       }
       
-      .navbar a:hover,
-      .navbar a:focus {
+      .navbar-style a:hover,
+      .navbar-style a:focus {
           background: transparent;
        }
       
-       .navbar ul {
+       .navbar-style ul {
         font-size: 16px;
         text-align: right;
       }
       
     }
       
-.titulo-registro {
-  position: relative;
-  top: 140px;
-  text-align: center;
-}
+
+
+
