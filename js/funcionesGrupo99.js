@@ -59,5 +59,5 @@ function validar() {
 
   const boton = document.getElementById("btn"); boton.addEventListener("click", ()=>{ boton.style.color = "white"; boton.style.backgroundColor = "green"; });
 
-    
+
   

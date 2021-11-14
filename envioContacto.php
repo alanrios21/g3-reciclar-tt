@@ -13,9 +13,11 @@
 
 <body>
 
+<a href="index.html">Volver</a>
+
 <?php
 /*el nombre del archivo debe el ser el mismo del  form */
-$nombre = $_POST["nombre"];
+$nombre = $_POST["nombreInput"];
 $apellido = $_POST["apellido"];
 $email = $_POST["mail"];
 $fechaNacimiento = $_POST["fecha_nacimiento"];
@@ -26,13 +28,16 @@ $provincia = $_POST["provincia"];
 $pais = $_POST["pais"];
 
 
-
+$old_val = ini_get('display_errors');
+ini_set('display_errors', 'off');
+echo $nombre;
+ini_set('display_errors', $old_val);
 
 print "<p>Su nombre es <strong>$nombre</strong>.</p>\n";
 print "\n";
 print "<p>Su apellido es <strong>$apellido</strong>.</p>\n";
 print "\n";
-print "<p>Su eMail es <strong>$email</strong>.</p>\n";
+print "<p>Su email es <strong>$email</strong>.</p>\n";
 print "\n";
 print "<p>Su fecha de nacimiento es <strong>$fechaNacimiento</strong>.</p>\n";
 print "\n";
@@ -49,14 +54,14 @@ print "\n";
 
 //Incluimos los datos de conexión y las funciones.
 
-include("datos-DB.php"); 
-$con = mysqli_connect($host,$user,$clave,$basededatos)or die ("no se puede conectar al servidor de la base de datos");
+include("datosDb.php"); 
+$con = mysqli_connect($host,$usuario,$clave,$basededatos)or die ("no se puede conectar al servidor de la base de datos");
 if (!$con){
     die("conexión fallida: ". mysqli_connect_error());
 }
 
-$db = mysqli_select_db ($con, $basededatos) or die ("no se ha podido conectar a la base de datos")
-$consulta = "INSERT INTO usuarios ( nombre, apellido, email, fechaNacimiento, contraseña, telefono,ciudad ,provincia, pais) VALUES ('$nombre','$apellido','$email'
+$db = mysqli_select_db ($con, $basededatos) or die ("no se ha podido conectar a la base de datos");
+$consulta = "INSERT INTO usuarios ( nombre, apellido, email, fechaNacimiento, contraseña, telefono, ciudad, provincia, pais) VALUES ('$nombre','$apellido','$email'
 '$fechaNacimiento','$contraseña', '$telefono','$ciudad' '$provincia', '$pais')";
 // usamos estas variables
 
@@ -67,4 +72,6 @@ if(mysqli_query ($con, $consulta)){
     echo "Error:" . $consulta . "<br>" . mysqli_error($scon);
 }
 mysqli_close($con);
+
 ?>
+
