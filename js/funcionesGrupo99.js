@@ -8,7 +8,7 @@ menuBtn.addEventListener("click", function () {
 }
 
 function ageCalculator() {  
-  var userinput = document.getElementById("date").value;  
+  var userinput = document.querySelector(".date").value;  
   var dob = new Date(userinput);  
   if(userinput==null || userinput=='') {      
     return false;   

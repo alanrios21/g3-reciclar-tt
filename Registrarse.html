@@ -42,35 +42,40 @@
 
 <div class="form">
 
-    <form action="envioContacto.php" method="POST"> <label  class="label" for="text"> Nombre</label> <br>
-    <input class="formulario" type="text" id="nombreInput" name="nombreInput"  > <br>
-    <label  class="label" for="text"> Apellido</label> <br>
-    <input class="formulario" type="text" id="apellido" name="apellido" >  <br>
-    <label class="label" for="email"> Email </label> <br>
-    <input class="formulario" type="email" name="mail" id="mail"> <br>
-    <label class="label" for="text">Fecha de nacimiento </label> <br>
-    <input class="formulario" type="date" id="fecha_nacimiento" name="fecha_nacimiento" > <br>
-    <label class="label" for="password">Contraseña </label> <br>
-    <input class="formulario" type="password" name="contraseña" id="contraseña"> <br>
-    <label class="label" for="text"> Teléfono </label> <br>
-    <input class="formulario" type="text" name="telefono" id="telefono" >  <br>
-    <label class="label" for="text"> Ciudad </label> <br>
-    <input class="formulario" type="text" name="ciudad" id="ciudad" >  <br>
-    <label class="label" for="text"> Provincia </label> <br>
-    <input class="formulario" type="text" name="provincia" id="provincia" >  <br>
-    <label class="label" for="text"> País </label> <br>
-    <input class="formulario" type="text" name="pais" id="pais" >  <br>
-    <button class="boton" type="submit" > Enviar </button> <br>
-    
-</form>
+    <form action="envioContacto.php" method="POST" class="form-registro"> 
+        <label  class="label-nombre" for="text"> Nombre</label> <br>
+        <input class="formulario" type="text" id="nombreInput" name="nombreInput"  > <br>
+        <label  class="label" for="text"> Apellido</label> <br>
+        <input class="formulario" type="text" id="apellido" name="apellido" >  <br>
+        <label class="label" for="email"> Email </label> <br>
+        <input class="formulario" type="email" name="mail" id="mail"> <br>
+        <label class="label" for="text">Fecha de nacimiento </label> <br>
+        <input class="formulario date" type="date" id="fecha_nacimiento" name="fecha_nacimiento" > <br>
+        <label class="label" for="password">Contraseña </label> <br>
+        <input class="formulario" type="password" name="contraseña" id="contraseña"> <br>
+        <label class="label" for="text"> Teléfono </label> <br>
+        <input class="formulario" type="text" name="telefono" id="telefono" >  <br>
+        <label class="label" for="text"> Ciudad </label> <br>
+        <input class="formulario" type="text" name="ciudad" id="ciudad" >  <br>
+        <label class="label" for="text"> Provincia </label> <br>
+        <input class="formulario" type="text" name="provincia" id="provincia" >  <br>
+        <label class="label" for="text"> País </label> <br>
+        <input class="formulario" type="text" name="pais" id="pais" >  <br>
+        <button class="boton" type="submit" > Enviar </button> <br>
+        
+    </form>
 
+    
 </div>
-<button type="button" id='btn'>Cambiar Color</button>
+
+<button class="boton boton-calcular-edad" type="button" onclick="ageCalculator()">Calcular Edad</button> <br>
+
+<button class="boton boton-cambiar-color" type="button" id='btn'>Cambiar Color</button>
 
         </section>
 
         <footer class="footer" id="footer">
-            © Cordoba Capital 2022
+            <p>© Cordoba Capital 2021</p>
         </footer>
 </body>
 </html>
