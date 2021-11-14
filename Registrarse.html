@@ -12,15 +12,15 @@
 <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="css/bootstrap.min.css">
 <script src="js/bootstrap.min.js"></script> 
-<script src="js/script.js" defer></script>
+<script src="js/funcionesGrupo99.js" defer></script>
 </head>
-<body>
+<body id="background">
     
    
 
      <header id="header" class="header"> 
         
-        <img src="/img/LogoReciclarte2.png" class="logo-img" width="100px" id="img">
+        <a href="index.html"><img src="/img/LogoReciclarte2.png" class="logo-img" width="100px" id="img"></a>
     <nav id="navbar-style" class="navbar-style">
         <ul>
             <li><a class= "navlink"  href="index.html">Inicio</a></li>
@@ -37,17 +37,19 @@
 
         <section class="container-fluid grid-registro">
 
-    <h3 class="titulo-registro">Crear Cuenta</h3>
+    <h3 class="titulo-registro" id="titulo-registro">Crear Cuenta</h3>
 
 
 <div class="form">
 
-    <form> <label  class="label" for="text"> Nombre Completo </label> <br>
-    <input class="formulario" type="text" >  <br>
+    <form> <label  class="label" for="text"> Nombre</label> <br>
+    <input class="formulario" type="text" id="nombre"  > <br>
+    <label  class="label" for="text"> Apellido</label> <br>
+    <input class="formulario" type="text" id="apellido" >  <br>
     <label class="label" for="email"> Email </label> <br>
     <input class="formulario" type="email"> <br>
     <label class="label" for="text">Fecha de nacimiento </label> <br>
-    <input class="formulario" type="text" > <br>
+    <input class="formulario" type="date" id="date" > <br>
     <label class="label" for="password">Contraseña </label> <br>
     <input class="formulario" type="password"> <br>
     <label class="label" for="text"> Teléfono </label> <br>
@@ -58,11 +60,12 @@
     <input class="formulario" type="text" >  <br>
     <label class="label" for="text"> País </label> <br>
     <input class="formulario" type="text" >  <br>
-    <button class="boton" type="submit"> Enviar </button> <br>
-
+    <button class="boton" type="button" onclick="validar()"> Enviar </button> <br>
+    
 </form>
-</div>
 
+</div>
+<button type="button" id='btn'>Cambiar Color</button>
 
         </section>
 

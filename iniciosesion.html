@@ -12,7 +12,7 @@
 <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="css/bootstrap.min.css">
 <script src="js/bootstrap.min.js"></script> 
-<script src="js/script.js" defer></script>
+<script src="js/funcionesGrupo99.js" defer></script>
 </head>
 <body>
     
@@ -20,7 +20,7 @@
 
      <header id="header" class="header"> 
         
-        <img src="/img/LogoReciclarte2.png" class="logo-img" width="100px" id="img">
+        <a href="index.html"><img src="/img/LogoReciclarte2.png" class="logo-img" width="100px" id="img"></a>
     <nav id="navbar-style" class="navbar-style">
         <ul>
             <li><a class= "navlink"  href="index.html">Inicio</a></li>
@@ -42,7 +42,7 @@
     <input class="formulario" type="text" id="formulario" required >  <br>
     <label class="label"for="password" id="label"> Contraseña </label> <br>
     <input class="formulario" type="password" id="formulario" required> <br>
-    <button class="boton" type="submit" id="boton"> Acceder </button> <br>
+    <button class="boton" type="button" onclick="mostrarAlertOperacion()"> Acceder </button> <br>
  
 </form>
 
@@ -56,7 +56,7 @@
 
         </section>
         <footer id="footer" class="footer">
-         <p>© CORDOBA Capital 2021</p> 
+         <p>© Cordoba Capital 2021</p> 
         </footer>
 </body>
 
