@@ -38,11 +38,12 @@
         <section class="container-fluid grid">
 <h3 class="title">Iniciar Sesión</h3>
 <div class="form2" id="form2" >
-<form> <label class="label" id="label" for="text"> Usuario </label> <br>
-    <input class="formulario" type="text" id="formulario" required >  <br>
+<form action="login.php" method="POST">
+    <label class="label" id="label" for="text"> Usuario </label> <br>
+    <input class="formulario" type="text" name="nombre" id="formulario" required>  <br>
     <label class="label"for="password" id="label"> Contraseña </label> <br>
-    <input class="formulario" type="password" id="formulario" required> <br>
-    <button class="boton" type="button" onclick="mostrarAlertOperacion()"> Acceder </button> <br>
+    <input class="formulario" type="password" id="formulario" name="pass" required> <br>
+    <button class="boton" type="submit" name="login"> Acceder </button> <br>
  
 </form>
 
