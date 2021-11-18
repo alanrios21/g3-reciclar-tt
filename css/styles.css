@@ -1,51 +1,142 @@
-html,body
-{
-    width: 100%;
-    height: 100%;
-    margin: 0px;
+html,body {
+   margin: 0px;
     padding: 0px;
-    overflow-x: hidden; 
-    background-color: #FFFFFF; font-family: 'Roboto', sans-serif; color: black;
+    background-color: #FFFFFF; 
+    font-family: 'Roboto', sans-serif; 
+    color: black;
 }
 
+.clase-oscuro{
+  background-color: #2c272e;
+}
+
+#background{
+  background-color: #FFFFFF;
+}
+
+#header { background-color: #ebebea;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    height: 100px;
+    z-index: 1;
+    } 
+
+.navbar-style {
+  height: 2000px;
+  background: #ebebea;
+  clip-path: circle(0px at top right);
+  transition: clip-path ease-in-out 700ms; 
+  position: relative;
+  top: -10px;
+}
+
+.navbar-style-open {
+    clip-path: circle(150% at top right);
+    top: 100%;
+    width: 100%;
+    height: 2000px;
+    background: #ebebea;
+    position: relative;
+    top: -10px;
+  }
+
+  .navbar-style ul {
+    list-style: none;
+    text-align: center;
+    font-size: 23px; 
+    margin: 0;
+    padding: 0;
+  }
+  
+  .navbar-style ul li a{
+    color:#4d5f3d;
+}
+
+  .navbar-style a {
+    
+    display: block;
+    padding: 1em 4em;
+    text-decoration: none; 
+  }
+  
+  .menu-toggle {
+    padding-bottom: 1em;
+    padding-top: 0.8em;
+    padding-left: 1em;
+    padding-right: 1em;
+    position: absolute;
+    top: 1.6em;
+    right: 0em;
+    cursor: pointer; 
+  }
+  
+  .menu-open .hamburger {
+    transform: rotate(45deg);
+  }
+  
+  .menu-open .hamburger::before {
+    opacity: 0;
+  }
+  
+  .menu-open .hamburger::after {
+    transform: translateY(-3px) rotate(-90deg);
+  }
+  
+  .hamburger,
+  .hamburger::before,
+  .hamburger::after {
+    content: "";
+    display: block;
+    background: #4d5f3d;
+    height: 3px;
+    width: 1.75em;
+    border-radius: 16px;
+    transition: all ease-in-out 500ms;
+  }
+  .hamburger::before {
+    transform: translateY(-6px);
+  }
+  .hamburger::after {
+    transform: translateY(3px);
+  }
+
+  .texto-carrusel {
+    font-size: 50px;
+  }
 
 
-#header { background-color: #ebebea; position: fixed; width: 100%;  top: 0px; left: 0px;  padding: 10px;  z-index: 1; margin-bottom : 300px; } 
-
-#navbar ul {right: 20px;  position: fixed; top: 20px;}
-#navbar ul li {display: inline;}
-.navlink { text-decoration: none;  
-    color: #4d5f3d;
-    margin: 30px;
-    padding: 6px 10px;
-    border-radius: 10px;
-    font-size: 22px;
-   position: relative;
-   top: 10px;
-} 
-
-
-#img {position: relative; bottom: 5px; }
-.footer { background-color: #ebebea; padding: 20px; text-align: center; position: fixed; width: 100%; left: 0px; bottom:0; font-size: 15px; font-weight: bold;}
-
-
+.footer { background-color: #ebebea; padding: 20px; text-align: center; width: 100%; left: 0px; bottom:0; font-size: 15px; font-weight: bold;}
 
 .reciclarte { text-align:center; font-size: 40px; margin-top: 200px;} 
 .p1 { padding-left: 40px; padding-right: 40px; font-size: 20px;} 
 .p2 { padding-left: 60px; padding-right: 40px; font-size: 20px;} 
 .p3 { padding-left: 40px; padding-right: 40px; font-size: 30px;} 
 .prueba1 {margin-bottom: 100px;}
-.form {width: 100%;
+.form {
+    grid-row: 2 / 3;
+    width: 90%;
     display: flex;
     flex-direction: column;
     align-items: center;
-    justify-content: center; background-color: #ebebea; max-width: 600px;margin-left: 640px; margin-top: 200px; opacity: 0.8; border-radius: 7px; 
-    box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19); height: 600px; background-image: url("/g3-reciclar-tt/assets/Formulario-registro.png") ; margin-bottom: 100px;}
+    justify-content: center; 
+    background-color: #ebebea; 
+    max-width: 600px; 
+    opacity: 0.8; 
+    border-radius: 7px; 
+    box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19); 
+    height: 800px; 
+    background-image: url("../img/Formulario-registro.png");
+    background-size: cover;
+    background-repeat: no-repeat;
+    margin-bottom: 200px;
+  }
     .formulario {border-top: none; margin-top: 10px; margin-bottom: 10px;
         border-left: none;
         border-right: none;
         outline: none;
-        font-weight: 500; border-radius: 7px; padding: 5px; }
+        font-weight: 500; border-radius: 7px; padding: 5px;
+       }
     .boton { width: 100%;
         outline: none;
         border: none;
@@ -62,25 +153,117 @@ html,body
         align-items: center;
         justify-content: center;
         margin-top: 10px; margin-left: 15px;
-    cursor: pointer; }
-.form2 {width: 100%;
+        cursor: pointer; }
+
+.container-fluid {
+  width: 100%;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: 1fr 3fr 1fr;
+  grid-template-rows: 1fr 3fr 1fr 1fr;
+  justify-content: center;
+  align-content: center;
+  justify-items: center;
+  align-items: center;
+}
+
+.title {
+  grid-column: 2 / 3;
+  grid-row: 1 / 2;
+  margin: 0;
+}
+
+.grid-registro {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: 1fr 10fr;
+  justify-content: center;
+  align-content: center;
+  justify-items: center;
+}
+
+.titulo-registro {
+  grid-row: 1 / 2;
+}
+
+.consejos {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 1fr 4fr;
+  justify-items: center;
+}
+
+
+.subtitulo-blog-1 {
+  grid-column: 1 / 2;
+  grid-row: 1 / 2;
+}
+
+.subtitulo-blog-2 {
+  grid-column: 2 / 3;
+  grid-row: 1 / 2;
+}
+
+.sitios {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-rows: 1fr 1fr;
+  justify-content: center;
+  align-items: center;
+  align-content: center;
+  justify-items: center;
+}
+
+.sitios-titulo {
+  grid-column: 1 / 4;
+  grid-row: 1 / 2;
+}
+
+.form2 {
+    grid-column: 2 / 3;
+    grid-row: 2 / 3;
+    width: 500px;
     display: flex;
-    flex-direction: column;
+    flex-flow: column wrap;
     align-items: center;
+    justify-content: center; 
+    background-image: url(../img/Fondo_iniciosesion.png);
+    background-repeat: no-repeat;
+    opacity: 0.8; 
+    border-radius: 7px; 
+    background-size: contain;
+    background-position: center center;
+    box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    height: 500px;
+  }
 
-    justify-content: center; background-image: url("/g3-reciclar-tt/assets/Fondo_iniciosesion.png"); max-width: 500px;margin-left: 700px; margin-top: 200px; opacity: 0.8; border-radius: 7px; 
+.aviso { 
+  background-color:#ebebea; 
+  width: 100%;
+  max-width: 400px; 
+   padding-top: 10px; 
+   text-align: center; 
+   display: flex; 
+   justify-content: center;
+   align-items: center; 
+    border-radius: 7px;
+    box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2); 
+    grid-row: 3 / 4; 
+    grid-column: 2 / 3;
+  }
 
-    box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19); height: 500px; }
-
-.aviso { background-color:#ebebea; width: 100%; max-width: 500px; padding: 5px; text-align: center; display: flex; justify-content: center;align-items: center; margin-left: 695px; 
-    margin-top: 50px ; border-radius: 7px;box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2); }
-
-.boton2 { width: 100%;
+.boton2 { 
+    grid-column: 2 / 3;
+    grid-row: 4 / 5;
+    width: 100%;
     outline: none;
     border: none;
     background-color:#ebebea;
     max-width: 150px;
-    border-radius: 5px;  padding-bottom: 10px;
+    border-radius: 5px;  
+    padding-bottom: 10px;
     padding-top: 10px;
     font-weight: 500;
     color: black;
@@ -88,7 +271,9 @@ html,body
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    margin-top: 50px; margin-left: 875px; margin-bottom: 50px; text-decoration: none; }
+    text-decoration: none; 
+    margin-bottom: 100px;
+  }
     .boton3 { width: 100%;
         outline: none;
         border: none;
@@ -105,24 +290,10 @@ html,body
         margin-top: 50px; margin-left: 800px; margin-bottom: 50px; text-decoration: none; }
     .titulo-blog{
         text-align: center;
-        margin-top: 200px;
         font-size: 40px;
+        grid-column: 1 / 4;
+        grid-row: 1 / 2;
        
-    }
-    .subtitulo-blog{
-        font-size: 30px;
-        text-align: center;
-    }
-
-    .centrar-img{
-        display: flex ;
-        justify-content: center;
-        align-items: center;
-        flex-direction: column;
-    }
-
-    .clase-img{
-        margin-bottom: 100px;
     }
 
     .parrafo-contactos{
@@ -130,40 +301,148 @@ html,body
         font-size: 30px;
     }
     .bajar-parrafos{
-        margin-top: 250px;
+        margin-top: 100px;
+        margin-bottom: 100px;
     }
 
 
-    .telefono {width:30px; position: relative; top:5px; right: 5px;}
-    .mail{width:30px; position: relative; top:5px; right: 5px;}
-    .facebook {width:30px; position: relative; top:5px; right: 5px;}
-    .instagram {width:30px; position: relative; top:5px; right: 5px;}
-    .form-contacto{background-image: url("/g3-reciclar-tt/assets/Fondo.png");}
+    .telefono {width:30px; position: relative; top:-5px; right: -4px;}
+    .mail{width:30px; position: relative; top:-3px; right: 5px;}
+    .facebook {width:30px; position: relative; top:-5px; right: 5px;}
+    .instagram {width:30px; position: relative; top:-5px; right: 5px;}
+    .form-contacto{background-image: url("../img/Fondo.png");}
     .container {margin-top: 600px;}
     .img-thumbnail {width: 350px;}
-    .noticias {position: relative; top: 120px; left:120px}
-    .compostar { text-align: center; position: relative; top: 60px;}
-    .ecologia { text-align: right;position: relative; right: 120px;}
-    .sitios {text-align: center;}
-
-   .imagen-central{
-       display: flex ; justify-content: center; align-items: center; background-image: url("/g3-reciclar-tt/assets/Contenido_2.png");  margin-top: 100px; background-size: 2500px; height: 800px; background-repeat: no-repeat; width: 100%;
-   }
+    .noticias {grid-column: 1 / 2; grid-row: 2 / 3;}
+    .compostar {grid-column: 2 / 3; grid-row: 2 / 3;}
+    .ecologia { grid-column: 3 / 4; grid-row: 2 / 3}
     
-    .logo-img{
-        position: relative;
-        top: 5px;
-    }
-
     ul {
         list-style-position: inside;
     }
-    
-    .navlink:hover{
-        color: white;
-    }
 
+    .imagen-principal {
+      margin-top: 100px;
+    }
+    
+    
+    .imagen-principal__contenido {
+      height: 100%;
+      width: 100%;
+    }
+     
+   
     .container, .container-fluid, .container-lg, .container-md, .container-sm, .container-xl, .container-xxl{
         padding-top: 150px;
     }
 
+    .inicio-blog {
+      width: 50%;
+    }
+
+    .carousel-inner > .item > img {
+      width: 200px; 
+      height: 200px; 
+     }
+
+    @media (min-width: 947px){
+        .menu-toggle {
+          display: none;
+      }
+      
+      #navbar-style {
+        top: 40px;
+        height: auto;
+        position: relative;
+        background: transparent;
+        float: right;
+        margin-right: 10px;
+        clip-path: initial;
+        text-align: right;
+        padding-right: 30px;
+      }
+
+      .navbar-style li {
+          display: inline-block;         
+      }
+
+      .navbar-style ul li a{
+        color:#4d5f3d;
+    }
+    
+      
+      .navbar-style a {
+          padding: 0;
+          margin-left: 3em;
+          text-decoration: none;
+      }
+      
+      .navbar-style a:hover,
+      .navbar-style a:focus {
+          background: transparent;
+       }
+      
+       .navbar-style ul {
+        font-size: 16px;
+        text-align: right;
+      }
+      
+    }
+      
+.caja-titulo-blog{
+    margin-top: 100px;
+    margin-bottom: 100px;
+}
+
+.form-input-error {
+  color: #fa7373;
+  font-size: 12px;
+  margin-bottom: 14px;
+  display: none;
+}
+
+.form-input-error-activo {
+  display: block;
+  margin: 10 auto;
+}
+
+.grid-contacto {
+  display: grid;
+  grid-template-rows: 1fr 10fr;
+  justify-items: center;
+  margin-top: 200px;
+}
+
+.bg-contacto {
+  margin: 0 auto;
+  background-image: url(../img/fondo-contacto.png);
+  width: 90%;
+  max-width: 600px; 
+  opacity: 0.8; 
+  border-radius: 7px; 
+  box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19); 
+  height: 800px; 
+  background-image: url("../img/fondo-contacto.png");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center center;
+  grid-row: 2 / 3;
+}
+
+  .titulo-contacto {
+  grid-template-columns: 1 / 2;
+  font-size: 40px;
+  grid-row: 1 / 2;
+}
+
+.label-nombre {
+  margin-top: 30px;
+}
+
+.boton-calcular-edad {
+  margin-top: -50px;
+}
+
+.boton-cambiar-color {
+  margin-bottom: 70px;
+}
